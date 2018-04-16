@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.yyj.zhxy.Main2Activity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="159dp"
+        android:layout_height="54dp"
+        android:text="用户注册"
+        android:gravity="center"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteY="58dp"
+        tools:layout_editor_absoluteX="113dp" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:text="学号"
+        android:textSize="20sp"
+        android:gravity="center"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="149dp" />
+
+    <EditText
+        android:id="@+id/registerid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="149dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:text="密码"
+        android:textSize="20sp"
+        android:gravity="center"
+        tools:layout_editor_absoluteY="223dp"
+        tools:layout_editor_absoluteX="43dp" />
+
+    <EditText
+        android:id="@+id/redisterpw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteY="223dp"
+        tools:layout_editor_absoluteX="113dp" />
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="注册"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="328dp" />
+</android.support.constraint.ConstraintLayout>
