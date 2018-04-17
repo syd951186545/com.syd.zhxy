@@ -10,14 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-
-
-
-
-
 public class MainActivity extends AppCompatActivity {
 
-    private DBManager myDBManager;
+    private MyDBHelper dbHelper;
     private EditText account;   //学号
     private EditText password;   //密码
 
@@ -25,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        myDBManager = new DBManager(this);
+        dbHelper = new MyDBHelper(this);
 
         //点击登录按钮
         Button loginButton = (Button) findViewById(R.id.button1);
@@ -47,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
             //验证登录
             public boolean login(String username, String password) {
-                SQLiteDatabase db = myDBManager.getWritableDatabase();
+                SQLiteDatabase db = dbHelper.getWritableDatabase();
                 String sql = "select * from userData where name=? and password=?";
                 Cursor cursor = db.rawQuery(sql, new String[]{username, password});
                 if (cursor.moveToFirst()) {

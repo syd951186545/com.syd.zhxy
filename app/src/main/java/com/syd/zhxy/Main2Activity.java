@@ -16,7 +16,7 @@ import static android.support.v7.appcompat.R.styleable.View;
 //注册功能
 public class Main2Activity extends AppCompatActivity {
 
-    private DBManager myDBMangager;
+    private MyDBHelper dbHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,7 +47,7 @@ public class Main2Activity extends AppCompatActivity {
 
     }
     public boolean register(String username,String password){
-        SQLiteDatabase db = DBManager.getWritableDatabase();
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
         /*String sql = "insert into userData(name,password) value(?,?)";
         Object obj[]={username,password};
         db.execSQL(sql,obj);*/
@@ -61,7 +61,7 @@ public class Main2Activity extends AppCompatActivity {
     }
     //检验用户名是否已存在
     public boolean CheckIsDataAlreadyInDBorNot(String value){
-        SQLiteDatabase db=DBManager.getWritableDatabase();
+        SQLiteDatabase db=dbHelper.getWritableDatabase();
         String Query = "Select * from userData where name =?";
         Cursor cursor = db.rawQuery(Query,new String[] { value });
         if (cursor.getCount()>0){
