@@ -55,7 +55,7 @@
         tools:layout_editor_absoluteX="113dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/bt_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="登录"
@@ -64,7 +64,7 @@
         tools:layout_editor_absoluteY="328dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/bt_signin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="注册"
