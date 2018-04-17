@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ZHXY</string>
+    <string name="app_name">智慧校园</string>
+    <string name="temp_value">长春 晴 7-22°C</string>
 </resources>

@@ -20,7 +20,7 @@
         android:id="@+id/textView2"
         android:layout_width="70dp"
         android:layout_height="40dp"
-        android:text="学号"
+        android:text="用户名"
         android:textSize="20sp"
         android:gravity="center"
         tools:layout_editor_absoluteX="43dp"
@@ -55,7 +55,7 @@
         tools:layout_editor_absoluteX="113dp" />
 
     <Button
-        android:id="@+id/bt_login"
+        android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="登录"
@@ -64,7 +64,7 @@
         tools:layout_editor_absoluteY="328dp" />
 
     <Button
-        android:id="@+id/bt_signin"
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="注册"

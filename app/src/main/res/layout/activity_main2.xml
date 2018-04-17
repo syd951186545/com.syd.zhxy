@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.yyj.zhxy.Main2Activity">
+    tools:context="com.syd.zhxy.Main2Activity">
 
     <TextView
         android:id="@+id/textView"
@@ -19,11 +19,21 @@
         android:id="@+id/textView2"
         android:layout_width="70dp"
         android:layout_height="40dp"
-        android:text="学号"
+        android:text="用户名"
         android:textSize="20sp"
         android:gravity="center"
         tools:layout_editor_absoluteX="43dp"
         tools:layout_editor_absoluteY="149dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="身份认证"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="43dp"
+        tools:layout_editor_absoluteY="298dp" />
 
     <EditText
         android:id="@+id/registerid"
@@ -60,5 +70,22 @@
         android:text="注册"
         android:textSize="20sp"
         tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="328dp" />
+        tools:layout_editor_absoluteY="379dp" />
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="老师"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="298dp" />
+
+    <RadioButton
+        android:id="@+id/radioButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="学生"
+        tools:layout_editor_absoluteX="232dp"
+        tools:layout_editor_absoluteY="298dp" />
+
 </android.support.constraint.ConstraintLayout>
