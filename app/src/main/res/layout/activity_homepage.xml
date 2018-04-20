@@ -21,8 +21,9 @@
             android:orientation="horizontal">
 
             <SearchView
+                android:id="@+id/searchView"
                 android:layout_width="406dp"
-                android:layout_height="44dp"
+                android:layout_height="0dp"
                 tools:layout_editor_absoluteX="0dp"
                 tools:layout_editor_absoluteY="4dp">
 
@@ -30,16 +31,18 @@
 
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout"
+                android:layout_width="383dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="52dp"
                 android:orientation="horizontal"
-                tools:layout_editor_absoluteX="8dp"
-                tools:layout_editor_absoluteY="56dp">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
                     android:id="@+id/imageView"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="74dp"
+                    android:layout_height="match_parent"
                     android:src="@drawable/sun"
                     tools:layout_editor_absoluteX="202dp"
                     tools:layout_editor_absoluteY="61dp" />
@@ -47,7 +50,7 @@
                 <TextView
                     android:id="@+id/textView5"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="76dp"
                     android:text="长春 晴 7-22°C"
                     android:textSize="30dp"
                     tools:layout_editor_absoluteX="0dp"
@@ -65,19 +68,21 @@
             </LinearLayout>
 
             <android.support.v7.widget.CardView
-                android:layout_width="410dp"
-                android:layout_height="128dp"
+                android:id="@+id/cardView"
+                android:layout_width="350dp"
+                android:layout_height="159dp"
+
                 android:layout_margin="10dp"
 
+
                 app:cardBackgroundColor="#FFDEAD"
-                tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="129dp"
-
-
-                >
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.222"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="147dp">
 
                 <LinearLayout
-                    android:layout_width="412dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
@@ -142,72 +147,98 @@
             </android.support.v7.widget.CardView>
 
             <android.support.constraint.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="193dp"
-                tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="270dp">
+                android:id="@+id/constraintLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="316dp">
 
                 <ImageButton
-                    android:layout_width="70dp"
+                    android:id="@+id/imageButton"
 
+                    android:layout_width="70dp"
                     android:layout_height="70dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
                     android:scaleType="centerInside"
                     android:src="@drawable/xiaoyuandaohang"
-                    tools:layout_editor_absoluteX="5dp"
-                    tools:layout_editor_absoluteY="0dp" />
+                    app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+                    app:layout_constraintHorizontal_bias="0.275"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageButton
                     android:id="@+id/imageButton2"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
+                    android:layout_marginTop="8dp"
                     android:scaleType="centerInside"
+                    app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/menjin"
-                    tools:layout_editor_absoluteX="106dp"
-                    tools:layout_editor_absoluteY="0dp" />
+                    tools:layout_editor_absoluteX="106dp" />
 
                 <ImageButton
                     android:id="@+id/imageButton3"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginStart="32dp"
                     android:scaleType="centerInside"
+                    app:layout_constraintStart_toEndOf="@+id/imageButton2"
                     app:srcCompat="@drawable/chongzhi"
-                    tools:layout_editor_absoluteX="209dp"
-                    tools:layout_editor_absoluteY="0dp" />
+                    tools:layout_editor_absoluteY="8dp" />
 
                 <ImageButton
                     android:id="@+id/imageButton4"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
                     android:scaleType="centerInside"
-                    app:srcCompat="@drawable/wodekabao"
-                    tools:layout_editor_absoluteX="306dp"
-                    tools:layout_editor_absoluteY="0dp" />
+                    app:layout_constraintStart_toEndOf="@+id/imageButton3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/wodekabao" />
 
                 <ImageButton
                     android:id="@+id/imageButton5"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
                     android:scaleType="centerInside"
-                    app:srcCompat="@drawable/kongjiaoshi"
-                    tools:layout_editor_absoluteX="5dp"
-                    tools:layout_editor_absoluteY="98dp" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView8"
+                    app:srcCompat="@drawable/kongjiaoshi" />
 
                 <ImageButton
                     android:id="@+id/imageButton6"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:scaleType="centerInside"
+                    app:layout_constraintStart_toEndOf="@+id/imageButton5"
                     app:srcCompat="@drawable/tushuguan"
-                    tools:layout_editor_absoluteX="106dp"
                     tools:layout_editor_absoluteY="98dp" />
 
                 <ImageButton
                     android:id="@+id/imageButton7"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginStart="32dp"
                     android:scaleType="centerInside"
+                    app:layout_constraintStart_toEndOf="@+id/imageButton6"
                     app:srcCompat="@drawable/tianjiagengduo"
-                    tools:layout_editor_absoluteX="209dp"
                     tools:layout_editor_absoluteY="98dp" />
 
                 <TextView
@@ -216,8 +247,8 @@
                     android:layout_height="24dp"
                     android:gravity="center"
                     android:text="校园导航"
-                    tools:layout_editor_absoluteX="5dp"
-                    tools:layout_editor_absoluteY="70dp" />
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="78dp" />
 
                 <TextView
                     android:id="@+id/textView10"
@@ -226,7 +257,7 @@
                     android:gravity="center"
                     android:text="门禁认证"
                     tools:layout_editor_absoluteX="106dp"
-                    tools:layout_editor_absoluteY="70dp" />
+                    tools:layout_editor_absoluteY="78dp" />
 
                 <TextView
                     android:id="@+id/textView11"
@@ -235,7 +266,7 @@
                     android:gravity="center"
                     android:text="充值缴费"
                     tools:layout_editor_absoluteX="209dp"
-                    tools:layout_editor_absoluteY="70dp" />
+                    tools:layout_editor_absoluteY="78dp" />
 
                 <TextView
                     android:id="@+id/textView12"
@@ -243,34 +274,40 @@
                     android:layout_height="24dp"
                     android:gravity="center"
                     android:text="我的卡包"
-                    tools:layout_editor_absoluteX="306dp"
-                    tools:layout_editor_absoluteY="70dp" />
+                    tools:layout_editor_absoluteX="298dp"
+                    tools:layout_editor_absoluteY="78dp" />
 
                 <TextView
                     android:id="@+id/textView13"
                     android:layout_width="70dp"
-                    android:layout_height="24dp"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
                     android:gravity="center"
                     android:text="空教室查询"
-                    tools:layout_editor_absoluteX="5dp"
-                    tools:layout_editor_absoluteY="168dp" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageButton5" />
 
                 <TextView
                     android:id="@+id/textView14"
                     android:layout_width="70dp"
                     android:layout_height="24dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
                     android:gravity="center"
                     android:text="图书馆借阅"
-                    tools:layout_editor_absoluteX="106dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView13"
                     tools:layout_editor_absoluteY="168dp" />
 
                 <TextView
                     android:id="@+id/textView15"
                     android:layout_width="70dp"
                     android:layout_height="24dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginStart="32dp"
                     android:gravity="center"
                     android:text="添加更多"
-                    tools:layout_editor_absoluteX="209dp"
+                    app:layout_constraintStart_toEndOf="@+id/textView14"
                     tools:layout_editor_absoluteY="168dp" />
 
 
