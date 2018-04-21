@@ -29,17 +29,19 @@ public class IdentityDao {
 
 
     // 增加的方法，返回的的是一个long值
-    public long addDate(String name,String phone){
+    public long addDate(String Id,String name,String password,String authentication){
         // 数据库文件利用DDMS可以查看，在 data/data/包名/databases 目录下即可查看,虚拟设备调试
         SQLiteDatabase sqLiteDatabase =  DBHelper.getWritableDatabase();
         ContentValues contentValues=new ContentValues();
 
-        contentValues.put("name",name);
-        contentValues.put("phone", phone);
+
+        contentValues.put("Ids",Id);
+        contentValues.put("names",name);
+        contentValues.put("passwords", password);
+        contentValues.put("authentications", authentication);
         // 返回,显示数据添加在第几行
-        // 加了现在连续添加了3行数据,突然删掉第三行,然后再添加一条数据返回的是4不是3
-        // 因为自增长
-        long rowid=sqLiteDatabase.insert("contactinfo",null,contentValues);
+        // 如果现在连续添加了3行数据,突然删掉第三行,然后再添加一条数据返回的是4不是3
+        long rowid=sqLiteDatabase.insert("identification_table",null,contentValues);
 
         sqLiteDatabase.close();
         return rowid;
@@ -49,7 +51,7 @@ public class IdentityDao {
     // 删除的方法，返回值是int
     public int deleteDate(String name){
         SQLiteDatabase sqLiteDatabase = DBHelper.getWritableDatabase();
-        int deleteResult = sqLiteDatabase.delete("contactinfo", "name=?", new String[]{name});
+        int deleteResult = sqLiteDatabase.delete("identification_table", "name=?", new String[]{name});
         sqLiteDatabase.close();
         return deleteResult;
     }
@@ -64,7 +66,7 @@ public class IdentityDao {
         SQLiteDatabase sqLiteDatabase = DBHelper.getWritableDatabase();
         ContentValues contentValues =new ContentValues();
         contentValues.put("phone", newPhone);
-        int updateResult = sqLiteDatabase.update("contactinfo", contentValues, "name=?", new String[]{name});
+        int updateResult = sqLiteDatabase.update("identification_table", contentValues, "name=?", new String[]{name});
         sqLiteDatabase.close();
         return updateResult;
     }
@@ -79,7 +81,7 @@ public class IdentityDao {
 
         SQLiteDatabase readableDatabase = DBHelper.getReadableDatabase();
         // 查询比较特别,涉及到 cursor
-        Cursor cursor = readableDatabase.query("contactinfo",
+        Cursor cursor = readableDatabase.query("identification_table",
                 new String[]{"phone"}, "name=?", new String[]{name}, null, null, null);
         if(cursor.moveToNext()){
             phone=cursor.getString(0);

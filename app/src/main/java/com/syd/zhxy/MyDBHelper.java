@@ -30,25 +30,15 @@ public class MyDBHelper extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        //手机注册号phones和验证码passcodes
-        String sql1 = "create table if not exists ["+login_table+"] "+"("+"phones"+" varchar primary key , "
-                +"passcodes"+" integer"+")";
+        //手机注册号phones和验证码passcodes(没接入发验证码API暂时把验证码=密码),未认证前的id为自增长数
+        db.execSQL("create table login_table (id integer primary key autoincrement, "
+                + "phones varchar(20), passcodes varchar(20))");
+
         //认证用户学号Id,密码password,姓名name,权限authentication.
-        String sql2 = "create table if not exists ["+identification_table+"] "+"("+"Ids"+" varchar primary key , "
-                +"names"+"varchar, "
-                +"passwords"+"varchar, "
-                +"authentications"+" varchar)";
-        Log.i("info","create table = "+login_table) ;
-        Log.i("info","create table = "+identification_table) ;
-        db.execSQL(sql1);
-        db.execSQL(sql2);
-//        //初始化school表中人员信息
-//        ArrayList<Person> persons = new ArrayList<>();
-//
-//        Person person1 = new Person("20175301", "sunyd", "student");
-//        Person person2 = new Person("20175302", "yuyu", "student");
-//        Person person3 = new Person("00000001", "cheng", "teacher");
-//
+        db.execSQL("create table identification_table (Ids varchar(20) primary key ," +
+                " names varchar(20), passwords varchar(20),authentications varchar(20))");
+
+
 //        db.beginTransaction();  //开始事务
 //        try {
 //            for (Person personx : persons) {

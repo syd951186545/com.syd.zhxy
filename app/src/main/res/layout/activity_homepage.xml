@@ -12,7 +12,8 @@
         android:layout_height="555dp"
         android:orientation="horizontal"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp">
+        tools:layout_editor_absoluteX="0dp"
+        tools:ignore="MissingConstraints">
 
 
         <android.support.constraint.ConstraintLayout
