@@ -79,14 +79,15 @@
         </LinearLayout>
 
         </LinearLayout>
+
     <Button
-        android:id="@+id/certificat_Button"
+        android:id="@+id/identifyButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_gravity="center"
-        android:text="登录"
-        android:textSize="20dp"
-        android:background="#36648B"/>
+        android:background="#36648B"
+        android:gravity="center"
+        android:text="认证"
+        android:textSize="20dp" />
     </LinearLayout>
 

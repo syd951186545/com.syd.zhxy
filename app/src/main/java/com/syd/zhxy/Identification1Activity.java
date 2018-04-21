@@ -1,29 +1,28 @@
 package com.syd.zhxy;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 
-public class Homepage extends AppCompatActivity {
+public class Identification1Activity extends AppCompatActivity {
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.homepage);
+        setContentView(R.layout.identification1);
 
-        ImageButton identify = (ImageButton) findViewById(R.id.identification);
+        Button identify = (Button) findViewById(R.id.identification1Button);
         identify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(Homepage.this, Identification1Activity.class);
+                Intent intent = new Intent(Identification1Activity.this, Identification2Activity.class);
                 startActivity(intent);
 
 
             }
         });
+
     }
 }
