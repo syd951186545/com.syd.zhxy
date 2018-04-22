@@ -22,11 +22,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:orientation="vertical">
+
                 <SearchView
                     android:id="@+id/searchView"
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    >
+                    android:layout_height="wrap_content">
 
                 </SearchView>
             </LinearLayout>
@@ -214,7 +214,7 @@
                         android:orientation="vertical">
 
                         <ImageButton
-                            android:id="@+id/payment"
+                            android:id="@+id/recharge"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_gravity="center"
@@ -222,13 +222,13 @@
 
                             android:scaleType="centerInside"
                             app:srcCompat="@drawable/chongzhi" />
+
                         <TextView
                             android:id="@+id/textView11"
                             android:layout_width="90dp"
                             android:layout_height="24dp"
                             android:gravity="center"
-                            android:text="充值缴费"
-                            />
+                            android:text="银行卡充值" />
 
                     </LinearLayout>
                     <LinearLayout
@@ -236,14 +236,15 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         >
+
                         <ImageButton
-                            android:id="@+id/imageButton4"
+                            android:id="@+id/mycards"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_gravity="center"
 
-                            android:scaleType="centerInside"
                             android:background="	#FFFFFF"
+                            android:scaleType="centerInside"
                             app:srcCompat="@drawable/wodekabao" />
                         <TextView
                             android:id="@+id/textView12"
@@ -273,14 +274,14 @@
                             android:scaleType="centerInside"
                             android:background="	#FFFFFF"
                             app:srcCompat="@drawable/kongjiaoshi" />
+
                         <TextView
                             android:id="@+id/textView13"
                             android:layout_width="90dp"
                             android:layout_height="24dp"
 
                             android:gravity="center"
-                            android:text="空教室查询"
-                            />
+                            android:text="空教室查询" />
 
                     </LinearLayout>
                     <LinearLayout
@@ -289,7 +290,7 @@
                         android:orientation="vertical">
 
                         <ImageButton
-                            android:id="@+id/searchbook"
+                            android:id="@+id/borrowbook"
                             android:layout_width="60dp"
                             android:layout_height="60dp"
                             android:layout_gravity="center"
@@ -370,24 +371,27 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
+
                         <Button
-                            android:id="@+id/chongzhi"
+                            android:id="@+id/recharge2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="充值"
-                            android:background="#FFFFFF"/>
+                            android:background="#FFFFFF"
+                            android:text="充值" />
+
                         <Button
-                            android:id="@+id/jiaofei"
+                            android:id="@+id/payment"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="缴费"
-                            android:background="#FFFFFF"/>
+                            android:background="#FFFFFF"
+                            android:text="缴费" />
+
                         <Button
-                            android:id="@+id/kabao"
+                            android:id="@+id/mycards2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="卡包"
-                            android:background="#FFFFFF"/>
+                            android:background="#FFFFFF"
+                            android:text="卡包" />
                         <Button
                             android:id="@+id/baoxiu"
                             android:layout_width="wrap_content"
@@ -426,12 +430,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
+
                         <Button
-                            android:id="@+id/chaxuntushu"
+                            android:id="@+id/searchbook"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="查询图书"
-                            android:background="#FFFFFF"/>
+                            android:background="#FFFFFF"
+                            android:text="查询图书" />
                         <Button
                             android:id="@+id/jieyuetushu"
                             android:layout_width="wrap_content"
@@ -481,12 +486,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
+
                         <Button
-                            android:id="@+id/wangluojiaofei"
+                            android:id="@+id/netpayment"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="网络缴费"
-                            android:background="#FFFFFF"/>
+                            android:background="#FFFFFF"
+                            android:text="网络缴费" />
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"

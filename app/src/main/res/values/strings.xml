@@ -2,4 +2,5 @@
 <resources>
     <string name="app_name">智慧校园</string>
     <string name="temp_value">长春 晴 7-22°C</string>
+    <string name="jiaofei">缴费</string>
 </resources>

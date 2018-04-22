@@ -22,8 +22,19 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".Identification1Activity" />
         <activity android:name=".Identification2Activity" />
-        <activity android:name=".payment" />
+        <activity android:name=".Payment" />
         <activity android:name=".SearchBook" />
+        <activity android:name=".Recharge" />
+        <activity android:name=".ApplyCard" />
+        <activity android:name=".ApplyCardSuccess" />
+        <activity android:name=".CampusCard" />
+        <activity android:name=".Cards" />
+        <activity android:name=".Collection" />
+        <activity android:name=".MyPage" />
+        <activity android:name=".NetPayment" />
+        <activity android:name=".NetPayment2" />
+        <activity android:name=".NetPayment3" />
+        <activity android:name=".TimeTable" />
     </application>
 
 </manifest>

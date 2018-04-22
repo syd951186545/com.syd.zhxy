@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="20px">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autoLink="all"
+        android:background="@drawable/border_write"
+        android:text=" 关于开展吉林大学第三节杏花文化节--“南岭力量”拔河比赛通知"
+        android:textSize="20dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10px"
+        android:background="@drawable/border_write"
+        android:text=" 关于开展吉林大学第三节杏花文化节--“杏香溢满园 诗书传万家”拔河比赛通知"
+        android:textSize="20dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10px"
+        android:background="@drawable/border_write"
+        android:text=" 吉林大学2018年度“优衣库奖学金”拟推荐候选人名单公示"
+        android:textSize="20dp"/>
+
+</LinearLayout>

@@ -41,11 +41,11 @@
                 android:layout_height="80dp"
                 android:layout_above="@id/kaiqishimingrenzheng"
 
-                android:background="@android:color/holo_green_light"
+                android:background="@drawable/mashangkaiqi"
                 android:gravity="center"
                 android:text="马上开启"
-                android:textColor="#FFFFFF"
-                android:textSize="30dp"
+                android:textColor="#050505"
+                android:textSize="20dp"
 
 
                 />

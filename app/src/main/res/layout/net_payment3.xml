@@ -13,7 +13,7 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:gravity="center_vertical|center_horizontal"
-            
+
             android:text="确认续存？"
             android:textSize="30dp" />
         <LinearLayout
