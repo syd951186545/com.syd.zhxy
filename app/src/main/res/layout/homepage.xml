@@ -8,28 +8,32 @@
 
 
     <ScrollView
-        android:layout_width="422dp"
-        android:layout_height="555dp"
-        android:orientation="horizontal">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:orientation="vertical">
-
                 <SearchView
                     android:id="@+id/searchView"
                     android:layout_width="match_parent"
-                    android:layout_height="30dp">
+                    android:layout_height="30dp"
+                    >
 
                 </SearchView>
             </LinearLayout>
+
+
+
+
 
 
             <LinearLayout
@@ -74,7 +78,8 @@
                 android:layout_width="360dp"
                 android:layout_height="120dp"
 
-                app:cardBackgroundColor="#FFDEAD">
+                app:cardBackgroundColor="#FFDEAD"
+                >
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -127,12 +132,12 @@
                             android:src="@drawable/erweima" />
 
                         <TextView
-                            android:id="@+id/textx"
+                            android:id="@+id/textView9"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center"
-                            android:text="#改:(我的->实名认证)"
-                            android:textSize="15dp" />
+                            android:textSize="15dp"
+                            android:text="已完成实名认证" />
 
 
                     </LinearLayout>
@@ -146,27 +151,27 @@
                 android:id="@+id/LinearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-
+                android:orientation="vertical"
+                >
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-
                         <ImageButton
                             android:id="@+id/imageButton"
 
-                            android:layout_width="90dp"
-                            android:layout_height="90dp"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:background="	#FFFFFF"
+                            android:layout_gravity="center"
 
                             android:scaleType="centerInside"
-                            android:src="@drawable/xiaoyuandaohang" />
-
+                            android:src="@drawable/xiaoyuandaohang"
+                            />
                         <TextView
                             android:id="@+id/textView8"
                             android:layout_width="90dp"
@@ -178,27 +183,27 @@
 
 
                     </LinearLayout>
-
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-
                         <ImageButton
                             android:id="@+id/imageButton2"
-                            android:layout_width="90dp"
-                            android:layout_height="90dp"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
 
                             android:scaleType="centerInside"
-
-                            app:srcCompat="@drawable/menjin" />
-
+                            android:background="	#FFFFFF"
+                            app:srcCompat="@drawable/menjin"
+                            />
                         <TextView
                             android:id="@+id/textView10"
                             android:layout_width="90dp"
                             android:layout_height="24dp"
                             android:gravity="center"
-                            android:text="门禁认证" />
+                            android:text="门禁认证"
+                            />
 
                     </LinearLayout>
 
@@ -209,44 +214,376 @@
                         android:orientation="vertical">
 
                         <ImageButton
-                            android:id="@+id/imageButton3"
-                            android:layout_width="90dp"
-                            android:layout_height="90dp"
+                            android:id="@+id/payment"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:background="#FFFFFF"
 
                             android:scaleType="centerInside"
                             app:srcCompat="@drawable/chongzhi" />
-
                         <TextView
                             android:id="@+id/textView11"
                             android:layout_width="90dp"
                             android:layout_height="24dp"
                             android:gravity="center"
-                            android:text="充值缴费" />
+                            android:text="充值缴费"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+                        <ImageButton
+                            android:id="@+id/imageButton4"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+
+                            android:scaleType="centerInside"
+                            android:background="	#FFFFFF"
+                            app:srcCompat="@drawable/wodekabao" />
+                        <TextView
+                            android:id="@+id/textView12"
+                            android:layout_width="90dp"
+                            android:layout_height="24dp"
+                            android:gravity="center"
+                            android:text="我的卡包"
+                            />
 
                     </LinearLayout>
 
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <ImageButton
+                            android:id="@+id/imageButton5"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+
+                            android:scaleType="centerInside"
+                            android:background="	#FFFFFF"
+                            app:srcCompat="@drawable/kongjiaoshi" />
+                        <TextView
+                            android:id="@+id/textView13"
+                            android:layout_width="90dp"
+                            android:layout_height="24dp"
+
+                            android:gravity="center"
+                            android:text="空教室查询"
+                            />
+
+                    </LinearLayout>
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                         <ImageButton
-                            android:id="@+id/imageButton4"
-                            android:layout_width="90dp"
-                            android:layout_height="90dp"
-
+                            android:id="@+id/searchbook"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:background="	#FFFFFF"
                             android:scaleType="centerInside"
-
-                            app:srcCompat="@drawable/wodekabao" />
-
+                            app:srcCompat="@drawable/tushuguan" />
                         <TextView
-                            android:id="@+id/textView12"
+                            android:id="@+id/textView14"
                             android:layout_width="90dp"
                             android:layout_height="24dp"
+
                             android:gravity="center"
-                            android:text="我的卡包" />
+                            android:text="图书馆借阅"
+                            />
 
                     </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <ImageButton
+                            android:id="@+id/imageButton7"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:scaleType="centerInside"
+                            android:background="	#FFFFFF"
+                            app:srcCompat="@drawable/tianjiagengduo"
+                            />
+                        <TextView
+                            android:id="@+id/textView15"
+                            android:layout_width="90dp"
+                            android:layout_height="24dp"
+
+                            android:gravity="center"
+                            android:text="添加更多"
+                            />
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="生活服务"
+                        android:textColor="#FF0000"
+                        android:layout_weight="4"
+                        />
+                    <Button
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="更多"
+                        android:textColor="#FF0000"
+                        android:background="#FFFFFF"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/chongzhi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="充值"
+                            android:background="#FFFFFF"/>
+                        <Button
+                            android:id="@+id/jiaofei"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="缴费"
+                            android:background="#FFFFFF"/>
+                        <Button
+                            android:id="@+id/kabao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="卡包"
+                            android:background="#FFFFFF"/>
+                        <Button
+                            android:id="@+id/baoxiu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="报修"
+                            android:background="#FFFFFF"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="图书馆"
+                        android:textColor="#FF0000"
+                        android:layout_weight="4"
+                        />
+                    <Button
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="更多"
+                        android:textColor="#FF0000"
+                        android:background="#FFFFFF"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/chaxuntushu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="查询图书"
+                            android:background="#FFFFFF"/>
+                        <Button
+                            android:id="@+id/jieyuetushu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="借阅图书"
+                            android:background="#FFFFFF"/>
+                        <Button
+                            android:id="@+id/kongweichaxun"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="空位查询"
+                            android:background="#FFFFFF"/>
+                        <Button
+                            android:id="@+id/zixunfuwu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="咨询服务"
+                            android:background="#FFFFFF"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="网络中心"
+                    android:textColor="#FF0000"
+                    android:layout_weight="4"
+                    />
+                <Button
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="更多"
+                    android:textColor="#FF0000"
+                    android:background="#FFFFFF"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/wangluojiaofei"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="网络缴费"
+                            android:background="#FFFFFF"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/zhinan"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="校园卡开通及其他功能指南"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"/>
+                        <Button
+                            android:id="@+id/IPchaxun"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="IP地址申请与查询"
+                            android:background="#FFFFFF"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="教学管理"
+                        android:textColor="#FF0000"
+                        android:layout_weight="4"
+                        />
+                    <Button
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="更多"
+                        android:textColor="#FF0000"
+                        android:background="#FFFFFF"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/kebiaochaxun"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="#FFFFFF"
+                            android:text="课表查询" />
+
+                        <Button
+                            android:id="@+id/kaoqinqiandao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#FFFFFF"
+                            android:text="考勤签到" />
+
+                        <Button
+                            android:id="@+id/kongjiaoshi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#FFFFFF"
+                            android:text="空教室查询" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/qingjia"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="请假申请"
+
+                            android:background="#FFFFFF"/>
+                        <Button
+                            android:id="@+id/gongzichaxun"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="工资查询"
+                            android:background="#FFFFFF"/>
+                    </LinearLayout>
+
 
                 </LinearLayout>
 
@@ -254,81 +591,63 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="教务管理"
+                        android:textColor="#FF0000"
+                        android:layout_weight="4"
+                        />
+                    <Button
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="更多"
+                        android:textColor="#FF0000"
+                        android:background="#FFFFFF"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <ImageButton
-                            android:id="@+id/imageButton5"
-                            android:layout_width="90dp"
-                            android:layout_height="90dp"
-
-                            android:scaleType="centerInside"
-
-                            app:srcCompat="@drawable/kongjiaoshi" />
-
-                        <TextView
-                            android:id="@+id/textView13"
-                            android:layout_width="90dp"
-                            android:layout_height="24dp"
-
-                            android:gravity="center"
-                            android:text="空教室查询" />
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/shitangxiaofei"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="食堂消费情况"
+                            android:background="#FFFFFF"/>
+                        <Button
+                            android:id="@+id/jiaoshishangkepingjia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="教室上课评价"
+                            android:background="#FFFFFF"/>
 
                     </LinearLayout>
-
                     <LinearLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/xueshengfenbu"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="学生分布情况"
 
-                        <ImageButton
-                            android:id="@+id/imageButton6"
-                            android:layout_width="90dp"
-                            android:layout_height="90dp"
-
-                            android:scaleType="centerInside"
-
-                            app:srcCompat="@drawable/tushuguan" />
-
-                        <TextView
-                            android:id="@+id/textView14"
-                            android:layout_width="90dp"
-                            android:layout_height="24dp"
-
-                            android:gravity="center"
-                            android:text="图书馆借阅" />
-
+                            android:background="#FFFFFF"/>
+                        <Button
+                            android:id="@+id/yingjichuli"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="应急处理"
+                            android:background="#FFFFFF"/>
                     </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <ImageButton
-                            android:id="@+id/identification"
-                            android:layout_width="90dp"
-                            android:layout_height="90dp"
-
-                            android:scaleType="centerInside"
-
-                            app:srcCompat="@drawable/tianjiagengduo" />
-
-                        <TextView
-                            android:id="@+id/textView15"
-                            android:layout_width="90dp"
-                            android:layout_height="24dp"
-
-                            android:gravity="center"
-                            android:text="临时当认证,点它" />
-
-                    </LinearLayout>
-
-
                 </LinearLayout>
 
 
@@ -338,5 +657,8 @@
         </LinearLayout>
     </ScrollView>
 
-
+    <include layout="@layout/activity_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"/>
 </LinearLayout>

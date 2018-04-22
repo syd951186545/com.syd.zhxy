@@ -5,6 +5,9 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+/**
+ *用于手机注册登录
+ */
 public class LoginDao {
 
     private MyDBHelper DBHelper;
@@ -13,8 +16,13 @@ public class LoginDao {
         DBHelper = new MyDBHelper(context);
     }
 
-
-    //用手机号和验证码,新用户就默认注册,老用户就默认登陆,验证码API没接入,(暂时固定4位密码)
+    /**
+     *手机号判断:
+     *          新用户就默认注册
+     *          老用户就默认登陆,验证码API没接入,(暂时固定4位密码)
+     * @param phone 手机号码
+     * @param passcode 验证码
+     */
     public long login(String phone, String passcode){
         if(alterDate(phone)==null){
             long rowid=addDate(phone,passcode);//输出提示,数据被插入在第几行
@@ -24,8 +32,13 @@ public class LoginDao {
         }
 
     }
+    /**
+     * 注册新的电话号码(和验证码)
+     * 返回的的是一个行号不是主键
+     * @param phones 手机号码
+     * @param passcodes 验证码
+     */
 
-    // 注册新的电话号码(和验证码)，返回的的是一个行号不是主键
     public long addDate(String phones, String passcodes) {
         // 虚拟设备调试,数据库文件利用DDMS可以查看，在 data/data/包名/databases 目录下即可查看
         SQLiteDatabase WritableDatabase = DBHelper.getWritableDatabase();

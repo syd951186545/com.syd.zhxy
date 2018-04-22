@@ -22,6 +22,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".Identification1Activity" />
         <activity android:name=".Identification2Activity" />
+        <activity android:name=".payment" />
+        <activity android:name=".SearchBook" />
     </application>
 
 </manifest>

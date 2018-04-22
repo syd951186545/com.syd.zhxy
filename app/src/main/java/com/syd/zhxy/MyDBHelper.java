@@ -31,14 +31,15 @@ public class MyDBHelper extends SQLiteOpenHelper{
     @Override
     public void onCreate(SQLiteDatabase db) {
         //手机注册号phones和验证码passcodes(没接入发验证码API暂时把验证码=密码),未认证前的id为自增长数
-        db.execSQL("create table login_table (id integer primary key autoincrement, "
+        db.execSQL("create table login_table (Ids integer primary key autoincrement, "
                 + "phones varchar(20), passcodes varchar(20))");
 
         //认证用户学号Id,密码password,姓名name,权限authentication.
         db.execSQL("create table identification_table (Ids varchar(20) primary key ," +
                 " names varchar(20), passwords varchar(20),authentications varchar(20))");
 
-
+        db.execSQL("create table book (bookiIds varchar(20) primary key ," +
+                " names varchar(20), passwords varchar(20))");
 //        db.beginTransaction();  //开始事务
 //        try {
 //            for (Person personx : persons) {
@@ -48,7 +49,6 @@ public class MyDBHelper extends SQLiteOpenHelper{
 //        } finally {
 //            db.endTransaction();    //结束事务
 //        }
-
     }
 
     @Override

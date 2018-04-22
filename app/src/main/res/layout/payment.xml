@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/layout_title"
+        android:text="缴费"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="学费"
+        android:textSize="30dp"
+        android:gravity="left"
+        android:background="#FFFFFF"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="补考费"
+        android:textSize="30dp"
+        android:gravity="left"
+        android:background="#FFFFFF"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="书本费"
+        android:textSize="30dp"
+        android:gravity="left"
+        android:background="#FFFFFF"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="宿舍费"
+        android:textSize="30dp"
+
+        android:gravity="left"
+        android:background="#FFFFFF"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="水电费"
+        android:textSize="30dp"
+        android:gravity="left"
+        android:background="#FFFFFF"/>
+
+</LinearLayout>

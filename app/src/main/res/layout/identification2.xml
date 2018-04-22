@@ -26,13 +26,14 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="姓名"
-                android:textSize="20dp"
+                android:layout_weight="1"
                 android:gravity="center"
-                android:layout_weight="1"/>
+                android:text="认证姓名"
+                android:textSize="20dp" />
             <EditText
                 android:id="@+id/cerficat_name"
                 android:layout_width="wrap_content"
@@ -44,13 +45,13 @@
             android:layout_height="80dp"
             android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="20dp"
-                    android:text="学号"
-                    android:gravity="center"
-                    android:layout_weight="1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="认证学号"
+                android:textSize="20dp" />
                 <EditText
                     android:id="@+id/certificat_id"
                     android:layout_width="wrap_content"
@@ -62,19 +63,21 @@
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center"
-                android:text="密码"
-                android:textSize="20dp"
-                android:layout_weight="1"/>
+                android:text="设置密码"
+                android:textSize="20dp" />
+
             <EditText
                 android:id="@+id/certificat_pw"
-                android:inputType="textPassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="4"/>
+                android:layout_weight="4"
+                android:inputType="textPassword" />
 
         </LinearLayout>
 
