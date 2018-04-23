@@ -4,8 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <include layout="@layout/layout_title"
-        android:text="缴费"/>
+    <include
+        android:id="@+id/include"
+        layout="@layout/activity_top"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="50dp"

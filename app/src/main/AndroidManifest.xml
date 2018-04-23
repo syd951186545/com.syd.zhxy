@@ -57,6 +57,9 @@
         <activity android:name=".NetPayment3" />
         <activity android:name=".TimeTable" />
         <activity android:name=".BaiDuMap" />
+        <activity android:name=".Main2Activity"
+        android:launchMode="singleTask"
+        android:screenOrientation="portrait"></activity>
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"

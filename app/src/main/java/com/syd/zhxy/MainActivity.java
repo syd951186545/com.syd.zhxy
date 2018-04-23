@@ -1,5 +1,9 @@
 package com.syd.zhxy;
 
+import android.app.Activity;
+import android.app.ActivityManager;
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -13,6 +17,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -39,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 String phones=phone.getText().toString().trim();
                 String passcodes=passcode.getText().toString().trim();
                 boolean status = false;
@@ -52,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if(loginDao.alterDate(phones)){
                         Toast.makeText(MainActivity.this,"用户已注册",Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(MainActivity.this, Homepage.class);
+                        Intent intent = new Intent(MainActivity.this, Main2Activity.class);
                         startActivity(intent);
                     }else{
                         long addLong = loginDao.addDate(phones, passcodes);
@@ -60,11 +69,19 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(MainActivity.this, "验证码错误", Toast.LENGTH_SHORT).show();
                         }else{
                             Toast.makeText(MainActivity.this,"恭喜成为第"+addLong+"个注册用户",Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(MainActivity.this, Homepage.class);
+                            Intent intent = new Intent(MainActivity.this, Main2Activity.class);
                             startActivity(intent);
                         }
                     }
                 }
+        });
+
+        Button sendMessageButton=(Button)findViewById(R.id.sendMessage);
+        sendMessageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this,"验证码已发送到您的手机",Toast.LENGTH_SHORT).show();
+            }
         });
     }
 

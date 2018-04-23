@@ -5,9 +5,12 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical">
+    <include
+        android:id="@+id/include"
+        layout="@layout/activity_top"/>
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="100dp"
         android:gravity="center"
         android:text="您的校园卡资金余额为：70.2元"/>
     <TextView

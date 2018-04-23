@@ -44,17 +44,6 @@ public class Homepage extends AppCompatActivity {
         });
 
 
-        ImageButton map = (ImageButton) findViewById(R.id.baidumap);
-        map.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "功能正在维护中,如果没授予权限你将被定位到海上,请放大地图到1000公里试试", Toast.LENGTH_SHORT).show();
-
-                Intent intent = new Intent(Homepage.this, BaiDuMap.class);
-                startActivity(intent);
-            }
-        });
-
         Button recharge2 = (Button) findViewById(R.id.recharge2);
         recharge2.setOnClickListener(new View.OnClickListener() {
             @Override

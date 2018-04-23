@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include
+        android:id="@+id/include"
+        layout="@layout/activity_top"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blackbiankuang"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="20px"
+            android:text="订阅号"
+            android:textColor="#000000"
+            android:layout_marginLeft="20px"
+            android:textSize="20dp"
+            android:layout_gravity="center_vertical"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blackbiankuang"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="20px"
+            android:text="吉林大学计算机学院"
+            android:textColor="#000000"
+            android:layout_marginLeft="20px"
+            android:textSize="20dp"
+            android:layout_gravity="center_vertical"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blackbiankuang"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="20px"
+            android:text="吉林大学通信学院"
+            android:textColor="#000000"
+            android:layout_marginLeft="20px"
+            android:textSize="20dp"
+            android:layout_gravity="center_vertical"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blackbiankuang"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="20px"
+            android:text="吉林大学商学院"
+            android:textColor="#000000"
+            android:layout_marginLeft="20px"
+            android:textSize="20dp"
+            android:layout_gravity="center_vertical"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blackbiankuang"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="20px"
+            android:text="张文文"
+            android:textColor="#000000"
+            android:layout_marginLeft="20px"
+            android:textSize="20dp"
+            android:layout_gravity="center_vertical"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/blackbiankuang"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="20px"
+            android:text="周静"
+            android:textColor="#000000"
+            android:layout_marginLeft="20px"
+            android:textSize="20dp"
+            android:layout_gravity="center_vertical"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

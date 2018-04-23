@@ -4,6 +4,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_marginTop="20px">
+    <include
+        android:id="@+id/include"
+        layout="@layout/activity_top"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
