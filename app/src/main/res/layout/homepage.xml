@@ -161,17 +161,17 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+
                         <ImageButton
-                            android:id="@+id/imageButton"
+                            android:id="@+id/baidumap"
 
                             android:layout_width="60dp"
                             android:layout_height="60dp"
-                            android:background="	#FFFFFF"
                             android:layout_gravity="center"
+                            android:background="	#FFFFFF"
 
                             android:scaleType="centerInside"
-                            android:src="@drawable/xiaoyuandaohang"
-                            />
+                            android:src="@drawable/xiaoyuandaohang" />
                         <TextView
                             android:id="@+id/textView8"
                             android:layout_width="90dp"
