@@ -8,7 +8,7 @@
     <include layout="@layout/activity_top"/>
     <LinearLayout
         android:layout_width="350dp"
-        android:layout_height="200dp"
+        android:layout_height="230dp"
 
         android:layout_gravity="center"
         android:background="#4EEE94"
@@ -67,6 +67,13 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"/>
         </LinearLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10px"
+            android:layout_marginBottom="10px"
+            android:layout_gravity="center"
+            android:src="@drawable/yanzhengma2"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

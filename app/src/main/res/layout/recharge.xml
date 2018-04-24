@@ -58,10 +58,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
-                android:text="充值金额："/>
+                android:text="充值密码："/>
             <EditText
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
+                android:inputType="textPassword"
                 />
         </LinearLayout>
         <LinearLayout
@@ -70,19 +71,22 @@
             android:layout_marginLeft="40px"
             android:orientation="horizontal">
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
-                android:text="充值金额："/>
+                android:text="验证码："/>
             <EditText
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 />
         </LinearLayout>
-        <Button
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="10px"
+            android:layout_marginBottom="10px"
+            android:src="@drawable/yanzhengma"
             />
         <TextView
             android:layout_width="wrap_content"
