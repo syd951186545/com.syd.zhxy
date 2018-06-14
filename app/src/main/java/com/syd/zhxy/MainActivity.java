@@ -1,12 +1,8 @@
 package com.syd.zhxy;
 
-import android.app.Activity;
-import android.app.ActivityManager;
-import android.content.ComponentName;
-import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
+import android.os.Build;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.telephony.PhoneNumberUtils;
@@ -14,13 +10,14 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import com.lidroid.xutils.http.RequestParams;
+import com.syd.zhxy.entities.Result;
+import com.syd.zhxy.entities.User;
+import com.syd.zhxy.https.BasicRequestCallBack;
+import com.syd.zhxy.https.XUtils;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -48,33 +45,53 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String phones=phone.getText().toString().trim();
-                String passcodes=passcode.getText().toString().trim();
+                String phones = phone.getText().toString().trim();
+                String passcodes = passcode.getText().toString().trim();
                 boolean status = false;
-                if(TextUtils.isEmpty(phones)||TextUtils.isEmpty(passcodes)) {
+                if (TextUtils.isEmpty(phones) || TextUtils.isEmpty(passcodes)) {
                     Toast.makeText(MainActivity.this, "手机号或验证码不能为空", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if (!isPhoneNumber(phones)){
-                        Toast.makeText(MainActivity.this,"请输入正确手机号",Toast.LENGTH_SHORT).show();
+                if (!isPhoneNumber(phones)) {
+                    Toast.makeText(MainActivity.this, "请输入正确手机号", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if(loginDao.alterDate(phones)){
-                        Toast.makeText(MainActivity.this,"用户已注册",Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(MainActivity.this, Main2Activity.class);
-                        startActivity(intent);
+                //验证码暂时随便判断的
+                if(passcodes.length()>0){
+                    getPermission();
+                    if(getPermission()){
+                        RequestParams params = new RequestParams();
+                        params.addBodyParameter("user.phoneNum", phones);
+                        XUtils.send(XUtils.LOGIN, params, new BasicRequestCallBack<Result<User>>() {
+                            @Override
+                            public void success(Result<User> data) {
+                                if (1==data.state) {
+                                    Toast.makeText(MainActivity.this, "登陆成功", Toast.LENGTH_SHORT).show();
+                                }else{XUtils.show("登陆失败");}
+                            }
+                        }, true);
                     }else{
-                        long addLong = loginDao.addDate(phones, passcodes);
-                        if(addLong==-1){
-                            Toast.makeText(MainActivity.this, "验证码错误", Toast.LENGTH_SHORT).show();
-                        }else{
-                            Toast.makeText(MainActivity.this,"恭喜成为第"+addLong+"个注册用户",Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(MainActivity.this, Main2Activity.class);
-                            startActivity(intent);
-                        }
-                    }
-                }
-        });
+                        Toast.makeText(MainActivity.this, "验证码错误", Toast.LENGTH_SHORT).show();
+                    }}
+
+
+//                if(loginDao.alterDate(phones)){
+//                        Toast.makeText(MainActivity.this,"用户已注册",Toast.LENGTH_SHORT).show();
+//                        Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+//                        startActivity(intent);
+//                    }else{
+//                        long addLong = loginDao.addDate(phones, passcodes);
+//                        if(addLong==-1){
+//                            Toast.makeText(MainActivity.this, "验证码错误", Toast.LENGTH_SHORT).show();
+//                        }else{
+//
+//                            Toast.makeText(MainActivity.this,"恭喜成为第"+addLong+"个注册用户",Toast.LENGTH_SHORT).show();
+//                            Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+//                            startActivity(intent);
+//                        }
+//                    }
+              }
+            });
 
         Button sendMessageButton=(Button)findViewById(R.id.sendMessage);
         sendMessageButton.setOnClickListener(new View.OnClickListener() {
@@ -105,6 +122,20 @@ public class MainActivity extends AppCompatActivity {
             return m.matches();
         }
         return false;
+    }
+    //Android版本大于6.0动态申请权限
+    public boolean getPermission(){
+        boolean havePermission = false;
+        if (Build.VERSION.SDK_INT >= 23) {
+            if(!Settings.canDrawOverlays(this)) {
+                Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION);
+                startActivity(intent);
+
+            }else{return true;}
+        }else {
+            //andriod<6.0 do nothing
+        }
+        return true;
     }
 }
 

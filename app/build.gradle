@@ -26,6 +26,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.config
         }
+        android {
+            useLibrary 'org.apache.http.legacy'
+        }
         debug {
             signingConfig signingConfigs.config
         }
@@ -41,6 +44,8 @@ android {
     }
 }
 
+
+
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:27.1.1'
@@ -50,4 +55,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     implementation files('libs/BaiduLBS_Android.jar')
+    implementation files('libs/fastjson-1.2.2.jar')
+    implementation files('libs/xutils-2.6.14.jar')
 }
