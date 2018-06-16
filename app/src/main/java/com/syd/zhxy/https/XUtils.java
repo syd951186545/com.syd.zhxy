@@ -19,7 +19,7 @@ public class XUtils {
 
     public static final String URL = "http://192.168.1.183:8080/college_online/";
     public static final String LOGIN = "login";
-    
+    public static final String BANKACCOUNT ="band_account";
 
     private static BitmapUtils bitmapUtils;
     private static HttpUtils httpUtils;

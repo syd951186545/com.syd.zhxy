@@ -5,6 +5,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import com.syd.zhxy.https.XUtils;
+
 import java.util.ArrayList;
 
 /**
@@ -14,12 +16,12 @@ import java.util.ArrayList;
 public class MyDBHelper extends SQLiteOpenHelper{
 
     //数据库名称
-    private static final String DATABASE_NAME = "ZHXYDB.db";
+    private static final String DATABASE_NAME = "ZHXYDB";
     //数据库的版本号
     private static final int DATABASE_VERSION = 1;
     //数据库中的表单
     private final String login_table = "login_table" ;
-    private final String identification_table = "identification_table" ;
+    private final String MyUserTable = "MyUserTable" ;
 
 
 
@@ -38,8 +40,10 @@ public class MyDBHelper extends SQLiteOpenHelper{
         db.execSQL("create table identification_table (Ids varchar(20) primary key ," +
                 " names varchar(20), passwords varchar(20),authentications varchar(20))");
 
-        db.execSQL("create table book (bookiIds varchar(20) primary key ," +
-                " names varchar(20), passwords varchar(20))");
+        db.execSQL("create table MyUserTable (token varchar(200) primary key ," +
+                " account varchar(20), user_name varchar(20)," +
+                " password varchar(20),phone_num varchar(20))");
+        XUtils.show("创建了本地用户信息文件");
 //        db.beginTransaction();  //开始事务
 //        try {
 //            for (Person personx : persons) {

@@ -17,6 +17,7 @@ import com.syd.zhxy.entities.Result;
 import com.syd.zhxy.entities.User;
 import com.syd.zhxy.https.BasicRequestCallBack;
 import com.syd.zhxy.https.XUtils;
+import com.syd.zhxy.MyApp;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -24,21 +25,27 @@ import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity {
 
-    private LoginDao loginDao;
+    private GlobalUserDao gu;
     private EditText phone;   //手机号
     private EditText passcode;   //验证码
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register);
 
-        loginDao = new LoginDao(MainActivity.this);
+        gu = new GlobalUserDao(MainActivity.this);
         phone = (EditText) findViewById(R.id.telepnum);
         passcode = (EditText) findViewById(R.id.yanzhengma);
+        if (((MyApp)getApplication()).hasUser){
+            XUtils.show("记住了本地用户不用再登陆了");
+            Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+            startActivity(intent);
+        }
 
 
-
+        getPermission();
         //点击手机登录按钮
         Button loginButton = (Button) findViewById(R.id.registerButton);
         loginButton.setOnClickListener(new View.OnClickListener() {
@@ -57,22 +64,27 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
                 //验证码暂时随便判断的
-                if(passcodes.length()>0){
-                    getPermission();
-                    if(getPermission()){
+                if(passcodes.length()==4){
                         RequestParams params = new RequestParams();
                         params.addBodyParameter("user.phoneNum", phones);
                         XUtils.send(XUtils.LOGIN, params, new BasicRequestCallBack<Result<User>>() {
                             @Override
                             public void success(Result<User> data) {
                                 if (1==data.state) {
+
+                                    ((MyApp)getApplication()).setUser(data.data);
+                                    XUtils.show(data.data.getPhoneNum());
+
                                     Toast.makeText(MainActivity.this, "登陆成功", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(MainActivity.this,Main2Activity.class);
+                                    startActivity(intent);
+
                                 }else{XUtils.show("登陆失败");}
                             }
                         }, true);
                     }else{
                         Toast.makeText(MainActivity.this, "验证码错误", Toast.LENGTH_SHORT).show();
-                    }}
+                    }
 
 
 //                if(loginDao.alterDate(phones)){
@@ -97,7 +109,8 @@ public class MainActivity extends AppCompatActivity {
         sendMessageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this,"验证码已发送到您的手机",Toast.LENGTH_SHORT).show();
+                XUtils.show("验证码已发送");
+
             }
         });
     }
@@ -124,18 +137,18 @@ public class MainActivity extends AppCompatActivity {
         return false;
     }
     //Android版本大于6.0动态申请权限
-    public boolean getPermission(){
-        boolean havePermission = false;
+    public void getPermission(){
+
         if (Build.VERSION.SDK_INT >= 23) {
             if(!Settings.canDrawOverlays(this)) {
                 Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION);
                 startActivity(intent);
 
-            }else{return true;}
+            }else{return ;}
         }else {
             //andriod<6.0 do nothing
         }
-        return true;
+        return ;
     }
 }
 
