@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/smoke_white"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_marginTop="150dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:src="@drawable/wancheng"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:text="你已成功添加银行卡"/>
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:text="完成"
+        android:textColor="@color/white"
+        android:textSize="@dimen/small_textSize"
+        android:layout_gravity="center"
+        android:layout_marginTop="190dp"
+        android:background="@color/sky_blue"/>
+
+</LinearLayout>

@@ -37,11 +37,11 @@ public class GlobalUserDao {
         if(globaluser.getUserName()!=null)  {contentValues.put("user_name", globaluser.getUserName());}
 
         if(-1!=WritableDatabase.insert("MyUserTable",null,contentValues)){
-            XUtils.show("成功保存本地用户"+globaluser.getPhoneNum());
+            XUtils.show("记录本地用户"+globaluser.getPhoneNum());
             WritableDatabase.close();
             return 1;
         }else {
-            XUtils.show("插入本地用户时失败"+globaluser.getPhoneNum());
+            XUtils.show("未能记录本地用户,请重试"+globaluser.getPhoneNum());
             return -1;
         }
 
@@ -81,7 +81,7 @@ public class GlobalUserDao {
             String phone_num=cursor.getString(cursor.getColumnIndex("phone_num"));
             String user_name=cursor.getString(cursor.getColumnIndex("user_name"));
             String token=cursor.getString(cursor.getColumnIndex("token"));
-            XUtils.show("查询操作有数据:"+user_name+phone_num);
+//            XUtils.show("本地使用者:"+user_name+phone_num);
 
             User globaluser = new User();
             globaluser.setAccount(account);

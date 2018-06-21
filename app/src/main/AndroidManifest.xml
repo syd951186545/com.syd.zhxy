@@ -2,24 +2,25 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.syd.zhxy">
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.GET_TASKS" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
         tools:ignore="ProtectedPermissions" />
-
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <!-- 访问精确位置的权限 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <!-- 这个权限用于进行网络定位-->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口-->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name=".MyApp"
@@ -29,47 +30,58 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <!-- 百度地图key -->
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="hO0Aab5wxv4XVIiM9Z93pYpEfyS1O4pw" />
 
         <activity android:name=".MainActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Homepage"
+        <activity
+            android:name=".Homepage"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
+        <activity android:name=".moneyANDcard.add_bankcard" />
+        <activity android:name=".moneyANDcard.ChangeActivity" />
+        <activity android:name=".moneyANDcard.WalletPage" />
+        <activity android:name=".moneyANDcard.RechargeActivity" />
+        <activity android:name=".moneyANDcard.add_bankcard2" />
+        <activity android:name=".moneyANDcard.Cards" />
+        <activity android:name=".moneyANDcard.add_bankcard3" />
+        <activity android:name=".moneyANDcard.add_bankcard4" />
+        <activity android:name=".moneyANDcard.BankcardPage" />
         <activity android:name=".Identification1Activity" />
         <activity android:name=".Identification2Activity" />
         <activity android:name=".Payment" />
         <activity android:name=".SearchBook" />
-        <activity android:name=".Recharge" />
         <activity android:name=".ApplyCard" />
         <activity android:name=".ApplyCardSuccess" />
         <activity android:name=".CampusCard" />
-        <activity android:name=".Cards" />
         <activity android:name=".Collection" />
-        <activity android:name=".MyPage" />
         <activity android:name=".NetPayment" />
         <activity android:name=".NetPayment2" />
         <activity android:name=".NetPayment3" />
         <activity android:name=".TimeTable" />
         <activity android:name=".BaiDuMap" />
+        <activity android:name=".Ivcode" />
+        <activity android:name=".Setting" />
 
-        <activity android:name=".Main2Activity"
-        android:launchMode="singleTask"
-        android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".Main2Activity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
-            android:process=":remote">
-        </service>
+            android:process=":remote" />
+
     </application>
 
 </manifest>

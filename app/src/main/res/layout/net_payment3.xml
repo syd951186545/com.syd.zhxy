@@ -2,6 +2,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/smoke_white"
     android:orientation="vertical">
     <include
         android:id="@+id/include"
@@ -15,6 +16,7 @@
         <Button
             android:layout_width="300dp"
             android:layout_height="wrap_content"
+            android:background="@color/transparent"
             android:gravity="center_vertical|center_horizontal"
 
             android:text="确认续存？"
@@ -28,10 +30,12 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@color/sky_blue"
                 android:text="确认"/>
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@color/sky_blue"
                 android:layout_marginLeft="30px"
                 android:text="取消"/>
         </LinearLayout>

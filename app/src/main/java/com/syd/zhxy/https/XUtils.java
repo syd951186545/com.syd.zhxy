@@ -11,13 +11,14 @@ import com.lidroid.xutils.http.HttpHandler;
 import com.lidroid.xutils.http.RequestParams;
 import com.lidroid.xutils.http.callback.RequestCallBack;
 import com.lidroid.xutils.http.client.HttpRequest;
+import com.syd.zhxy.Views.CircleView;
 import com.syd.zhxy.utils.Loading;
 import com.syd.zhxy.R;
 import com.syd.zhxy.utils.Loading;
 
 public class XUtils {
 
-    public static final String URL = "http://192.168.1.183:8080/college_online/";
+    public static final String URL = "http://zhxy.free.ngrok.cc/college_online/";
     public static final String LOGIN = "login";
     public static final String BANKACCOUNT ="band_account";
 
@@ -32,7 +33,7 @@ public class XUtils {
         if (bitmapUtils == null) {
             bitmapUtils = new BitmapUtils(context);
             bitmapUtils.configDefaultLoadingImage(R.drawable.loading_data);
-            bitmapUtils.configDefaultLoadFailedImage(R.drawable.no_data);
+            bitmapUtils.configDefaultLoadFailedImage(R.drawable.userimg);
             bitmapUtils.configDiskCacheEnabled(true);
         }
         if (httpUtils == null) {
@@ -72,6 +73,11 @@ public class XUtils {
     }
 
     public static void display_img(ImageView img, String url) {
+        //img是表示显示图片的控件，
+        //url表示图片的地址
+        bitmapUtils.display(img, url);
+    }
+    public static void display_img(CircleView img, String url) {
         //img是表示显示图片的控件，
         //url表示图片的地址
         bitmapUtils.display(img, url);

@@ -3,15 +3,16 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/smoke_white"
     android:orientation="vertical"
     >
     <include layout="@layout/activity_top"/>
     <LinearLayout
         android:layout_width="350dp"
         android:layout_height="230dp"
-
         android:layout_gravity="center"
         android:background="#4EEE94"
+        android:layout_marginTop="30dp"
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"

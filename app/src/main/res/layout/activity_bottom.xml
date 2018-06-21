@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="70dp"
+    android:layout_height="60dp"
     android:layout_gravity="bottom"
     android:orientation="horizontal">
     <LinearLayout
@@ -14,8 +14,8 @@
         android:orientation="vertical">
         <ImageView
             android:id="@+id/iv_message"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="@dimen/bottom_button"
+            android:layout_height="@dimen/bottom_button"
             android:layout_gravity="center"
             android:src="@drawable/message"/>
         <TextView
@@ -34,8 +34,8 @@
         android:orientation="vertical">
         <ImageView
             android:id="@+id/iv_address"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="@dimen/bottom_button"
+            android:layout_height="@dimen/bottom_button"
             android:layout_gravity="center"
             android:src="@drawable/address"/>
         <TextView
@@ -56,10 +56,10 @@
 
         <ImageView
             android:id="@+id/iv_homepage"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="@dimen/bottom_button"
+            android:layout_height="@dimen/bottom_button"
             android:layout_gravity="center"
-            android:src="@drawable/homepage" />
+            android:src="@drawable/smartschool" />
         <TextView
             android:id="@+id/tv_homepage"
             android:layout_width="wrap_content"
@@ -78,10 +78,10 @@
         android:orientation="vertical">
         <ImageView
             android:id="@+id/iv_information"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="@dimen/bottom_button"
+            android:layout_height="@dimen/bottom_button"
             android:layout_gravity="center"
-            android:src="@drawable/information"/>
+            android:src="@drawable/news"/>
         <TextView
             android:id="@+id/tv_information"
             android:layout_width="wrap_content"
@@ -98,8 +98,8 @@
         android:orientation="vertical">
         <ImageView
             android:id="@+id/iv_main"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="@dimen/bottom_button"
+            android:layout_height="@dimen/bottom_button"
             android:layout_gravity="center"
             android:src="@drawable/main"/>
         <TextView

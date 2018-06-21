@@ -2,10 +2,9 @@ package com.syd.zhxy;
 
 import android.app.Application;
 
+import com.syd.zhxy.entities.User;
 import com.syd.zhxy.https.XUtils;
 import com.syd.zhxy.utils.Loading;
-import com.syd.zhxy.entities.*;
-import com.syd.zhxy.GlobalUserDao;
 
 public class MyApp extends Application {
 
@@ -21,7 +20,7 @@ public class MyApp extends Application {
             GlobalUser = gu.alterUser();
             hasUser = true;
         }else{GlobalUser = null;
-            XUtils.show("没有本地用户");
+            XUtils.show("本地用户未被记录");
         }
     }
     public void onTerminate() {

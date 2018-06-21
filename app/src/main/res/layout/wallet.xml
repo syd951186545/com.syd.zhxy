@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/smoke_white"
+    android:orientation="vertical">
+    <include
+        android:id="@+id/include"
+        layout="@layout/activity_top"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:layout_marginTop="50px"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="100px"
+
+            android:orientation="horizontal"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="200px"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@color/white"
+            >
+
+
+            <ImageButton
+                android:id="@+id/changess"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/yue" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:text="我的余额（元）"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:textSize="20dp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="200px"
+            android:layout_weight="1.5"
+            android:gravity="center_vertical"
+            android:background="@color/white">
+
+            <ImageButton
+                android:id="@+id/bankcard_button"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/yinhangka" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:text="我的银行卡"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@color/white"
+
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/rechargex"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="40px"
+                android:scaleType="centerInside"
+                android:src="@drawable/chongzhi" />
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:layout_marginBottom="10dp"
+                android:text="充值"
+                android:textSize="15dp"
+                android:gravity="center"/>
+        </LinearLayout>
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/gray" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:layout_weight="1"
+
+            android:orientation="vertical">
+            <ImageView
+                android:layout_marginTop="40px"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/jiaoyijilu"
+                android:scaleType="centerInside"/>
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:text="交易记录"
+                android:textSize="15dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"/>
+        </LinearLayout>
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/gray" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_marginTop="40px"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/shezhi"
+                android:scaleType="centerInside"/>
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:text="支付管理"
+                android:textSize="15dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

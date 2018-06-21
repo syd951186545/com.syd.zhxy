@@ -1,11 +1,5 @@
 package com.syd.zhxy;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
@@ -13,25 +7,27 @@ import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.KeyEvent;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.Toolbar;
 
+import com.syd.zhxy.Views.CircleView;
+import com.syd.zhxy.https.XUtils;
+import com.syd.zhxy.moneyANDcard.Cards;
+import com.syd.zhxy.moneyANDcard.RechargeActivity;
+import com.syd.zhxy.moneyANDcard.WalletPage;
 
-import com.syd.zhxy.ContentAdapter;
-
-
-import static android.content.ContentValues.TAG;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class Main2Activity extends AppCompatActivity implements OnClickListener,OnPageChangeListener{
 
@@ -130,11 +126,11 @@ public class Main2Activity extends AppCompatActivity implements OnClickListener,
         // 适配器
         View page_01 = View.inflate(Main2Activity.this, R.layout.page_01, null);
         View page_02 = View.inflate(Main2Activity.this, R.layout.page_02, null);
-        View homepage = View.inflate(Main2Activity.this, R.layout.homepage, null);
+        View homepage = View.inflate(Main2Activity.this, R.layout.homepage,null);
         View page_04 = View.inflate(Main2Activity.this, R.layout.page_04, null);
-        View page_05 = View.inflate(Main2Activity.this, R.layout.page_05, null);
+        View my_page = View.inflate(Main2Activity.this, R.layout.my_page, null);
 
-        //添加子界面监控代码
+        //**************************主界面homepage监控代码*************************
         ImageButton map = (ImageButton) homepage.findViewById(R.id.baidumap);
         map.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -164,11 +160,11 @@ public class Main2Activity extends AppCompatActivity implements OnClickListener,
             }
         });
 
-        ImageButton recharge = (ImageButton) homepage.findViewById(R.id.recharge);
+        ImageButton recharge = (ImageButton) homepage.findViewById(R.id.recharge1);
         recharge.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Main2Activity.this, Recharge.class);
+                Intent intent = new Intent(Main2Activity.this, RechargeActivity.class);
                 startActivity(intent);
             }
         });
@@ -186,7 +182,7 @@ public class Main2Activity extends AppCompatActivity implements OnClickListener,
         recharge2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Main2Activity.this, Recharge.class);
+                Intent intent = new Intent(Main2Activity.this, RechargeActivity.class);
                 startActivity(intent);
             }
         });
@@ -234,20 +230,59 @@ public class Main2Activity extends AppCompatActivity implements OnClickListener,
                 startActivity(intent);
             }
         });
+        CircleView cirview = (CircleView) homepage.findViewById(R.id.userimg);
+        String url = "URI";//此处未执行,展示默认图
+        XUtils.display_img(cirview, url);
 
+        ImageButton ivcode =(ImageButton)homepage.findViewById(R.id.ivcode);
+        ivcode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(Main2Activity.this,Ivcode.class);
+                startActivity(intent);
+            }
+        });
+
+
+        //**************************Mypage子界面监控代码**************************************
+        //个人主页mypage界面:
+        Button wallet =(Button)my_page.findViewById(R.id.walletbutton);
+        wallet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(Main2Activity.this,WalletPage.class);
+                startActivity(intent);
+            }
+        });
+        Button cardss =(Button)my_page.findViewById(R.id.cardss);
+        cardss.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(Main2Activity.this,Cards.class);
+                startActivity(intent);
+            }
+        });
+        Button setting =(Button)my_page.findViewById(R.id.setting);
+        setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(Main2Activity.this,Setting.class);
+                startActivity(intent);
+            }
+        });
 
 
         //添加页面到适配器中
         views = new ArrayList<View>();
+
         views.add(page_01);
         views.add(page_02);
         views.add(homepage);
         views.add(page_04);
-        views.add(page_05);
+        views.add(my_page);
 
         this.adapter = new ContentAdapter(views);
         viewPager.setAdapter(adapter);
-
     }
 
     @Override

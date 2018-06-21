@@ -2,6 +2,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/smoke_white"
     android:orientation="vertical">
     <include
         android:id="@+id/include"
@@ -15,13 +16,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20dp"
-            android:text="姓名：于文文"/>
+            android:gravity="left"
+            android:text="姓名："/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20dp"
             android:layout_marginLeft="190px"
-            android:text="学号：54130521"/>
+            android:text="学号："/>
     </LinearLayout>
     <TableLayout
         android:layout_width="match_parent"

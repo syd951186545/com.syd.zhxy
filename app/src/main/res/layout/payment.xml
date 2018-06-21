@@ -3,45 +3,174 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/smoke_white"
     android:orientation="vertical">
     <include
         android:id="@+id/include"
         layout="@layout/activity_top"/>
-    <Button
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="学费"
-        android:textSize="30dp"
-        android:gravity="left"
-        android:background="#FFFFFF"/>
-    <Button
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:text="学费"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:textSize="@dimen/big_textSize"
+            android:gravity="left"
+            android:background="#FFFFFF"
+            />
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/you"
+            android:background="@color/white"
+            android:scaleType="centerInside"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/gray" />
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="补考费"
-        android:textSize="30dp"
-        android:gravity="left"
-        android:background="#FFFFFF"/>
-    <Button
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:text="补考费"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:textSize="@dimen/big_textSize"
+            android:gravity="left"
+            android:background="#FFFFFF"
+            />
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/you"
+            android:background="@color/white"
+            android:scaleType="centerInside"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/gray" />
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="书本费"
-        android:textSize="30dp"
-        android:gravity="left"
-        android:background="#FFFFFF"/>
-    <Button
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:text="书本费"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:textSize="@dimen/big_textSize"
+            android:gravity="left"
+            android:background="#FFFFFF"
+            />
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/you"
+            android:background="@color/white"
+            android:scaleType="centerInside"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/gray" />
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="宿舍费"
-        android:textSize="30dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:text="宿舍费"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:textSize="@dimen/big_textSize"
+            android:gravity="left"
+            android:background="#FFFFFF"
+            />
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/you"
+            android:background="@color/white"
+            android:scaleType="centerInside"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            />
+    </LinearLayout>
 
-        android:gravity="left"
-        android:background="#FFFFFF"/>
-    <Button
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/gray" />
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="水电费"
-        android:textSize="30dp"
-        android:gravity="left"
-        android:background="#FFFFFF"/>
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:text="水电费"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:textSize="@dimen/big_textSize"
+            android:gravity="left"
+            android:background="#FFFFFF"
+            />
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/you"
+            android:background="@color/white"
+            android:scaleType="centerInside"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            />
+    </LinearLayout>
+
+
+
+
 
 </LinearLayout>

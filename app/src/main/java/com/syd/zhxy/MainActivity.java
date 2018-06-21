@@ -2,9 +2,9 @@ package com.syd.zhxy;
 
 import android.content.Intent;
 import android.os.Build;
+import android.os.Bundle;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.telephony.PhoneNumberUtils;
 import android.text.TextUtils;
 import android.view.View;
@@ -17,14 +17,13 @@ import com.syd.zhxy.entities.Result;
 import com.syd.zhxy.entities.User;
 import com.syd.zhxy.https.BasicRequestCallBack;
 import com.syd.zhxy.https.XUtils;
-import com.syd.zhxy.MyApp;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
 public class MainActivity extends AppCompatActivity {
-
+    public static MainActivity instance;
     private GlobalUserDao gu;
     private EditText phone;   //手机号
     private EditText passcode;   //验证码
@@ -34,14 +33,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register);
+        instance=this;
 
         gu = new GlobalUserDao(MainActivity.this);
         phone = (EditText) findViewById(R.id.telepnum);
         passcode = (EditText) findViewById(R.id.yanzhengma);
         if (((MyApp)getApplication()).hasUser){
-            XUtils.show("记住了本地用户不用再登陆了");
             Intent intent = new Intent(MainActivity.this, Main2Activity.class);
             startActivity(intent);
+            XUtils.show("本地用户"+((MyApp)getApplication()).getUser().getPhoneNum());
         }
 
 
@@ -72,11 +72,14 @@ public class MainActivity extends AppCompatActivity {
                             public void success(Result<User> data) {
                                 if (1==data.state) {
 
-                                    ((MyApp)getApplication()).setUser(data.data);
+//                                    ((MyApp)getApplication()).setUser(data.data);
+                                    GlobalUserDao gu = new GlobalUserDao(instance);
+                                    gu.addDate(data.data);
                                     XUtils.show(data.data.getPhoneNum());
-
                                     Toast.makeText(MainActivity.this, "登陆成功", Toast.LENGTH_SHORT).show();
+
                                     Intent intent = new Intent(MainActivity.this,Main2Activity.class);
+                                    instance.finish();
                                     startActivity(intent);
 
                                 }else{XUtils.show("登陆失败");}
@@ -109,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
         sendMessageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 XUtils.show("验证码已发送");
 
             }
@@ -150,6 +154,8 @@ public class MainActivity extends AppCompatActivity {
         }
         return ;
     }
+
+
 }
 
 
