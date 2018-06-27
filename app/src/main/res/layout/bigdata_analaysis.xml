@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/smoke_white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/activity_top"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_canteen"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="食堂"
+                android:textSize="18dp"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/gray" />
+            <TextView
+                android:id="@+id/tv_teaching"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="教学"
+                android:textSize="18sp"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/gray" />
+            <TextView
+                android:id="@+id/tv_merchant"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="商户"
+                android:textSize="18sp"/>
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/gray" />
+            <TextView
+                android:id="@+id/tv_book"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="图书"
+                android:textSize="18sp"/>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/gray" />
+            <TextView
+                android:id="@+id/tv_dormitory"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="寝室"
+                android:textSize="18sp"/>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/gray" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/gray" />
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:flipInterval="30"
+            android:persistentDrawingCache="animation"/>
+
+    </LinearLayout>
+</LinearLayout>

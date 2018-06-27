@@ -7,9 +7,30 @@
         <item>出版社</item>
     </string-array>
     <string-array name="data1">
-        <item>ALL</item>
-        <item>中心校区</item>
-        <item>南湖校区</item>
-        <item>南岭校区</item>
+        <item>选择校区</item>
+        <item>吉林大学前卫南区</item>
+        <item>吉林大学前卫北区</item>
+        <item>吉林大学朝阳校区</item>
+        <item>吉林大学南岭校区</item>
+        <item>吉林大学南湖校区</item>
+        <item>吉林大学和平校区</item>
+    </string-array>
+    <string-array name="building">
+        <item>教学楼</item>
+        <item>逸夫教学楼</item>
+        <item>第三教学楼</item>
+        <item>李四光楼</item>
+        <item>经信教学楼</item>
+
+    </string-array>
+
+    <string-array name="level">
+        <item>楼层</item>
+        <item>一楼</item>
+        <item>二楼</item>
+        <item>三楼</item>
+        <item>四楼</item>
+        <item>五楼</item>
+
     </string-array>
 </resources>

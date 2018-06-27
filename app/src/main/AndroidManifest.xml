@@ -47,6 +47,13 @@
             android:name=".Homepage"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
+        <activity android:name=".BDA.BDBookActivity" />
+        <activity android:name=".BDA.BDCanteenActivity" />
+        <activity android:name=".BDA.BDDormitoryActivity" />
+        <activity android:name=".BDA.BDMerchantActivity" />
+        <activity android:name=".BDA.BDTeachingActivity" />
+        <activity android:name=".BDA.BigdataAnaylasis" />
+
         <activity android:name=".moneyANDcard.add_bankcard" />
         <activity android:name=".moneyANDcard.ChangeActivity" />
         <activity android:name=".moneyANDcard.WalletPage" />

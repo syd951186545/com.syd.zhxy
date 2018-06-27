@@ -17,6 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.syd.zhxy.BDA.BigdataAnaylasis;
 import com.syd.zhxy.Views.CircleView;
 import com.syd.zhxy.https.XUtils;
 import com.syd.zhxy.moneyANDcard.Cards;
@@ -242,6 +243,24 @@ public class Main2Activity extends AppCompatActivity implements OnClickListener,
                 startActivity(intent);
             }
         });
+        ImageButton data_anlaysis =(ImageButton)homepage.findViewById(R.id.data_anlaysis);
+        data_anlaysis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(Main2Activity.this,BigdataAnaylasis.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton imageButton8 =(ImageButton)homepage.findViewById(R.id.imageButton8);
+        imageButton8.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("http://q2070866z5.iok.la:11099/InnovationPlatform"));
+                startActivity(intent);
+            }
+        });
+
 
 
         //**************************Mypage子界面监控代码**************************************

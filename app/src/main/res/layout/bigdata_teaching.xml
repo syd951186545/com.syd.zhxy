@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/smoke_white"
+    android:gravity="center"
+    android:id="@+id/ll_teaching"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="30dp"
+            android:src="@drawable/black_shutiao"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="选修课TOP10" />
+
+        <Spinner
+            android:id="@+id/xuanxiuke"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/data1">
+
+        </Spinner>
+    </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="中心校区" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:src="@drawable/xuanxiuketop10" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="30dp"
+                android:src="@drawable/black_shutiao" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="男女人数比例" />
+            <Spinner
+                android:id="@+id/nannvbili"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/data1">
+
+            </Spinner>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:src="@drawable/nannvbili" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="30dp"
+                android:src="@drawable/black_shutiao" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="学科专业结构分布" />
+            <Spinner
+                android:id="@+id/xuekezhuanye"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/data1">
+
+            </Spinner>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:src="@drawable/xuekezhuanyejiegou" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="30dp"
+                android:src="@drawable/black_shutiao" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="生源结构分布" />
+            <Spinner
+                android:id="@+id/shengyuanjiegou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/data1">
+            </Spinner>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:src="@drawable/shengyuanjiegou" />
+
+
+
+
+</LinearLayout>
