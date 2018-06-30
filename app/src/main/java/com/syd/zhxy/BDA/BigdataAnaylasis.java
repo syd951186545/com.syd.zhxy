@@ -35,6 +35,7 @@ public class BigdataAnaylasis extends AppCompatActivity implements OnClickListen
     private TextView tv_dormitory;
 
     private ViewPager BDAViewPager;
+
     private List<View> views;
     private ContentAdapter adapter;
 
@@ -59,7 +60,7 @@ public class BigdataAnaylasis extends AppCompatActivity implements OnClickListen
         tv_merchant.setOnClickListener(this);
         tv_book.setOnClickListener(this);
         tv_dormitory.setOnClickListener(this);
-        BDAViewPager.setOnPageChangeListener((OnPageChangeListener) this);
+//      BDAViewPager.setOnPageChangeListener((OnPageChangeListener) this);
     }
     private void initView() {
 
@@ -68,7 +69,9 @@ public class BigdataAnaylasis extends AppCompatActivity implements OnClickListen
         this.tv_merchant = (TextView) findViewById(R.id.tv_merchant);
         this.tv_book = (TextView) findViewById(R.id.tv_book);
         this.tv_dormitory = (TextView) findViewById(R.id.tv_dormitory);
-        this.BDAViewPager = (ViewPager) findViewById(R.id.vp_content);
+
+        this.BDAViewPager = (ViewPager) findViewById(R.id.viewpager);
+
 
         View canteen = View.inflate(BigdataAnaylasis.this,R.layout.bigdata_canteen, null);
         View teaching = View.inflate(BigdataAnaylasis.this,R.layout.bigdata_teaching, null);

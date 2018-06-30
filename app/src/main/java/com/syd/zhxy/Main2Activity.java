@@ -255,9 +255,15 @@ public class Main2Activity extends AppCompatActivity implements OnClickListener,
         imageButton8.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("http://q2070866z5.iok.la:11099/InnovationPlatform"));
+                Intent intent = new Intent();
+                intent.setAction("android.intent.action.VIEW");
+                Uri content_url = Uri.parse("http://q2070866z5.iok.la:11099//InnovationPlatform");
+                intent.setData(content_url);
                 startActivity(intent);
+
+//                Intent intent = new Intent(Intent.ACTION_VIEW);
+//                intent.setData(Uri.parse("http://q2070866z5.iok.la:11099/InnovationPlatform"));
+//                startActivity(intent);
             }
         });
 

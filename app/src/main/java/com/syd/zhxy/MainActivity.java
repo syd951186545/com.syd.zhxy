@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
                 //验证码暂时随便判断的
+                //与服务器的交互进行登录验证
                 if(passcodes.length()==4){
                         RequestParams params = new RequestParams();
                         params.addBodyParameter("user.phoneNum", phones);
@@ -85,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
 
                                 }else{XUtils.show("登陆失败");}
                             }
-                        }, true);
+                        }, false);
                     }else{
                         Toast.makeText(MainActivity.this, "验证码错误", Toast.LENGTH_SHORT).show();
                     }
@@ -148,15 +149,15 @@ public class MainActivity extends AppCompatActivity {
             if(!Settings.canDrawOverlays(this)) {
                 Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION);
                 startActivity(intent);
-
-            }else{return ;}
-        }else {
+                XUtils.show("请打开权限");
+            }else {
             //andriod<6.0 do nothing
         }
         return ;
     }
 
 
+    }
 }
 
 
